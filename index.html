@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Only the most important Yankees info.">
+    <title>The Giancarlo Stanton Strikeout Tracker</title>
+    <style>
+      .sr_widget {
+        display: none;
+        /* Sorryyyyyy */
+      }
+      body {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+      }
+      .app {
+        padding: 20px;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      p {
+        font-size: 12px;
+        margin-top: 50px;
+      }
+      a {
+        color: #2c3e50;
+      }
+    </style>
+  </head>
+  <body>
+      <script type="text/javascript" src="//widgets.sports-reference.com/wg.fcgi?css=1&site=br&url=%2Fplayers%2Fsplit.fcgi%3Fid%3Dstantmi03%26year%3D2018%26t%3Db&div=div_total&del_col=1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29&max_rows=1"></script>
+      <div class='app'>
+        <h1 id='text'></h1>
+        <p>
+          Data courtesy <a href='http://bbref.com'>Baseball-Reference</a>. Updated once daily, so there might be <i>even more</i>! 
+          <br />
+          Brought to you by the creator of the <a href='http://ruhee.ca/david-price-names'>David Price Nickname Generator</a>.
+        </p>
+      </div>
+      <script>
+        const number = document.querySelector('td[data-stat="SO"]').innerHTML
+        const date = new Date()
+        const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+        document.getElementById('text').innerHTML = `It is <b>${formattedDate}</b> and Giancarlo Stanton has struck out <b>${number}</b> times.`
+      </script>
+  </body>
+</html>
