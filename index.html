@@ -55,7 +55,7 @@
         const number = document.querySelector('td[data-stat="SO"]').innerHTML
         const date = new Date()
         const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
-        document.getElementById('text').innerHTML = `It is <b>${formattedDate}</b> and Giancarlo Stanton has struck out <b>${number}</b> times.`
+        document.getElementById('text').innerHTML = 'It is <b>' + formattedDate + '</b> and Giancarlo Stanton has struck out <b>' + number + '</b> times.'
       </script>
   </body>
 </html>
